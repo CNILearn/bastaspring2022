@@ -94,5 +94,4 @@ async Task DownloadBlobsAsync(BlobContainerClient blobContainerClient)
     }
 }
 
-
 public record SomeData(string Text, int Number);

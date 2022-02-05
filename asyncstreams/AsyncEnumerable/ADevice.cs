@@ -14,4 +14,3 @@ public class ADevice
 }
 
 public record SomeData(string Text, int Number);
-

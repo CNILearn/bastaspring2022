@@ -11,7 +11,6 @@ CancellationTokenSource cts = new(TimeSpan.FromSeconds(10));
 
 try
 {
-
     await foreach (var item in dev.GetSomeDataAsync().WithCancellation(cts.Token))
     {
         Console.WriteLine($"{item.Number}, {item.Text}");

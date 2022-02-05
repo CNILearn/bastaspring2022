@@ -8,7 +8,6 @@
 
 //}
 
-
 ADevice dev = new();
 var enumerable = dev.GetSomeData();
 using var enumerator = enumerable.GetEnumerator();

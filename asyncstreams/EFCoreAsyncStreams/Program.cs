@@ -1,6 +1,4 @@
-﻿
-
-using var host = Host.CreateDefaultBuilder()
+﻿using var host = Host.CreateDefaultBuilder()
     .ConfigureServices((context, services) =>
     {
         services.AddDbContext<SomeDataContext>(options =>

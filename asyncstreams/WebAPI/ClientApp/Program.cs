@@ -1,13 +1,13 @@
 ﻿using AsyncStreaming.Shared;
 
 using System.Text.Json;
-Console.WriteLine("...");
+Console.WriteLine("Wait for service - press return to continue");
 Console.ReadLine();
 
 using HttpClient httpClient = new();
 httpClient.DefaultRequestHeaders.Add("Accept", "application/json");
 
-// v1
+// use in-memory data
 using HttpResponseMessage response = await httpClient.GetAsync("https://localhost:5001/api/ADevice", HttpCompletionOption.ResponseHeadersRead).ConfigureAwait(false);
 
 response.EnsureSuccessStatusCode();
@@ -19,7 +19,7 @@ await foreach (SomeData? data in JsonSerializer.DeserializeAsyncEnumerable<SomeD
 
 }
 
-// v2
+// use service accessing database
 //using HttpResponseMessage response = await httpClient.GetAsync("https://localhost:5001/api/UseEFCore", HttpCompletionOption.ResponseHeadersRead).ConfigureAwait(false);
 
 //response.EnsureSuccessStatusCode();
