@@ -11,6 +11,9 @@ namespace BooksAPI.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<Book>().Property(b => b.Title).HasMaxLength(50);
+            modelBuilder.Entity<Book>().Property(b => b.Publisher).HasMaxLength(20);
+
             Book[] sampleBooks = Enumerable.Range(1, 100)
                 .Select(i => new Book(i, $"title {i}", "sample pub"))
                 .ToArray();

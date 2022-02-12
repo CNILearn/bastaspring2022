@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BooksAPI.Migrations
 {
     [DbContext(typeof(BooksContext))]
-    [Migration("20220212181008_InitBook")]
+    [Migration("20220212184137_InitBook")]
     partial class InitBook
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -29,11 +29,13 @@ namespace BooksAPI.Migrations
 
                     b.Property<string>("Publisher")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
 
                     b.Property<string>("Title")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.HasKey("BookId");
 
