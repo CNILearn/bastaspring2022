@@ -1,5 +1,6 @@
-using BooksAPI.Models;
-using Microsoft.EntityFrameworkCore;
+global using BooksAPI.Models;
+global using Microsoft.EntityFrameworkCore;
+global using System.ComponentModel.DataAnnotations;
 
 var builder = WebApplication.CreateBuilder();
 builder.Services.AddSqlServer<BooksContext>(builder.Configuration.GetConnectionString("BooksConnection"));
