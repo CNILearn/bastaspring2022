@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.SignalR;
+
 using System.Runtime.CompilerServices;
 
 namespace SignalRStreaming.Hubs;
