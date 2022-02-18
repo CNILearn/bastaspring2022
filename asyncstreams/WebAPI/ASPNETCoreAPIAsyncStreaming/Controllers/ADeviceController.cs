@@ -1,6 +1,6 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using AsyncStreaming.Shared;
+
 using Microsoft.AspNetCore.Mvc;
-using AsyncStreaming.Shared;
 
 namespace ASPNETCoreAPIAsyncStreaming.Controllers;
 
@@ -9,11 +9,11 @@ namespace ASPNETCoreAPIAsyncStreaming.Controllers;
 public class ADeviceController : ControllerBase
 {
     [HttpGet]
-    public async IAsyncEnumerable<SomeData> GetSomeData()
+    public async IAsyncEnumerable<DeviceData> GetSomeData()
     {
         for (int i = 0; i < 100; i++)
         {
-            yield return new SomeData($"text {Random.Shared.Next(200)}", i);
+            yield return new DeviceData($"text {Random.Shared.Next(200)}", DateTime.Now, i);
             await Task.Delay(100);
         }
     }

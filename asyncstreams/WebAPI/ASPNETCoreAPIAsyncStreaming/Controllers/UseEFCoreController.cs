@@ -17,6 +17,7 @@ public class UseEFCoreController : ControllerBase
         ArgumentNullException.ThrowIfNull(dataContext);
         _dataContext = dataContext;
     }
+
     [HttpGet]
     public IAsyncEnumerable<SomeData> GetSomeData()
     {

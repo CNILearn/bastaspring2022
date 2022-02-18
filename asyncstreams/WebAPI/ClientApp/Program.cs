@@ -13,7 +13,7 @@ using HttpResponseMessage response = await httpClient.GetAsync("https://localhos
 response.EnsureSuccessStatusCode();
 using Stream responseStream = await response.Content.ReadAsStreamAsync().ConfigureAwait(false);
 
-await foreach (SomeData? data in JsonSerializer.DeserializeAsyncEnumerable<SomeData>(responseStream, new JsonSerializerOptions { PropertyNameCaseInsensitive = true, DefaultBufferSize = 128 }))
+await foreach (DeviceData? data in JsonSerializer.DeserializeAsyncEnumerable<DeviceData>(responseStream, new JsonSerializerOptions { PropertyNameCaseInsensitive = true, DefaultBufferSize = 128 }))
 {
     Console.WriteLine(data);
 
