@@ -13,10 +13,21 @@ CancellationTokenSource cts = new(10000);
 
 try
 {
-    await foreach (var data in connection.StreamAsync<SensorData>("GetSensorData").WithCancellation(cts.Token))
+    // v1
+    var channel = await connection.StreamAsChannelAsync<SensorData>("GetSensorData", cts.Token);
+    while (await channel.WaitToReadAsync(cts.Token))
     {
-        Console.WriteLine(data);
+        while (channel.TryRead(out SensorData? data))
+        {
+            Console.WriteLine($"received {data}");
+        }
     }
+
+    // v2
+    //await foreach (var data in connection.StreamAsync<SensorData>("GetSensorData").WithCancellation(cts.Token))
+    //{
+    //    Console.WriteLine(data);
+    //}
 }
 catch (OperationCanceledException)
 {
