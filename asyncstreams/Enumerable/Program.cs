@@ -17,9 +17,7 @@ while (enumerator.MoveNext())
     Console.WriteLine($"{item.Number}, {item.Text}");
 }
 
-
 foreach (var item in dev.GetSomeData())
 {
     Console.WriteLine($"{item.Number}, {item.Text}");
 }
-

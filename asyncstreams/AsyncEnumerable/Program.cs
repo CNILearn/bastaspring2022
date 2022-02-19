@@ -1,4 +1,7 @@
-﻿ADevice dev = new();
+﻿global using System.Runtime.CompilerServices;
+global using AsyncEnumerable;
+
+ADevice dev = new();
 //var enumerable = dev.GetSomeDataAsync();
 //await using var enumerator = enumerable.GetAsyncEnumerator();
 //while (await enumerator.MoveNextAsync())

@@ -1,6 +1,4 @@
-﻿namespace Enumerable;
-
-public class ADevice
+﻿public class ADevice
 {
     public IEnumerable<SomeData> GetSomeData()
     {
