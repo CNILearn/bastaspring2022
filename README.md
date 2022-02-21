@@ -43,6 +43,8 @@ C# 10 bietet viele Erleichterungen – dazu gehören Global Usings und Implicit 
 
 ## Async Streaming
 
+Mit den C#-async-Erweiterungen zu den yield- und foreach-Statements ist es einfacher geworden, asynchron Daten zu streamen. In dieser Session sehen Sie die Grundlagen zu async-Streaming, und auch, wie async-Streams mit EF Core, SignalR, ASP.NET Core 6, gRPC und mit Azure Services genutzt werden können.
+
 * Enumerable
     * Retrieving all files vs enumerable
     * `yield` statement
@@ -53,12 +55,12 @@ C# 10 bietet viele Erleichterungen – dazu gehören Global Usings und Implicit 
     * IAsyncDispose
     * await foreach
     * Cancellation token
-* EF Core
-    * AsAsyncEnumerable
 * Asynchronous Streaming with SignalR (SignalR)
     * System.Threading.Channels
     * Asynchronous streaming
 * Asynchronous Streaming with gRPC
     * Sensor data 
-
-Mit den C#-async-Erweiterungen zu den yield- und foreach-Statements ist es einfacher geworden, asynchron Daten zu streamen. In dieser Session sehen Sie die Grundlagen zu async-Streaming, und auch, wie async-Streams mit EF Core, SignalR, ASP.NET Core 6, gRPC und mit Azure Services genutzt werden können.
+* EF Core
+    * AsAsyncEnumerable    
+* Web API
+* Azure Storage
