@@ -23,7 +23,7 @@ string storageConnectionString = config["StorageConnectionString"];
 
 BlobServiceClient serviceClient = new(storageConnectionString);
 //var containerClient = await CreateContainerAsync(serviceClient);
-var containerClient = GetContainerClient("bastasample-19fbef85-20fe-4023-9b58-397a77c58300");
+var containerClient = GetContainerClient("bastasample-20220222");
 // await UploadBlobsAsync(containerClient);
 // await ListContainerAsync(containerClient);
 await DownloadBlobsAsync(containerClient);
@@ -85,7 +85,6 @@ async Task DownloadBlobsAsync(BlobContainerClient blobContainerClient)
 {
     await foreach (var item in blobContainerClient.GetBlobsAsync())
     {
-
         var blobClient = blobContainerClient.GetBlobClient(item.Name);
         var result = await blobClient.DownloadContentAsync();
         var data = result.Value.Content.ToObjectFromJson<SomeData>();
