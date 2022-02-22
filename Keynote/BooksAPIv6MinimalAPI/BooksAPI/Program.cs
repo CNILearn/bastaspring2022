@@ -1,4 +1,4 @@
-// 2 - top-level statements (C# 9)
+// 1 - top-level statements (C# 9)
 
 // 3 - global using declarations
 global using BooksAPI.Models;

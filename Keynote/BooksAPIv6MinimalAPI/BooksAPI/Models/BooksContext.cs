@@ -1,4 +1,4 @@
-﻿// 1 - file-scoped namespace - C# 10
+﻿// 2 - file-scoped namespace - C# 10
 namespace BooksAPI.Models;
 
 public class BooksContext : DbContext
