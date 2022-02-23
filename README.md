@@ -2,9 +2,15 @@
 
 ## Keynote - C# 10
 
-You can find the samples from the keynote with the [C# 10 and vnext samples](csharp10andnext).
+[Keynote samples](Keynote)
 
-[More information about InstantAPI](http://github.com/csharpfritz/InstantAPIs/)
+Samples:
+
+* BooksAPIv5 - ASP.NET Core Web API with EF Core using .NET 5
+* BooksAPIv6MinimalAPI - Minimal API with EF Core using .NET 6
+* BooksAPIv6MinimalAPIwithInstantAPI - using InstantAPIs
+
+[More information about InstantAPIs](http://github.com/csharpfritz/InstantAPIs/)
 
 ## C# 10 - What's new and what's next?
 
